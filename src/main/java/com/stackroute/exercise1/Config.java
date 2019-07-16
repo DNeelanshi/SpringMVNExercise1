@@ -1,4 +1,4 @@
-package com.stackroute.exercise1.config;
+package com.stackroute.exercise1;
 
 import com.stackroute.exercise1.User;
 import org.springframework.context.annotation.Bean;
