@@ -1,31 +1,29 @@
 package com.stackroute.exercise1;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class User {
 
-    private String name;
-    private int userid;
 
-    public User(int userid, String name) {
-        this.name = name;
-        this.userid = userid;
-        System.out.println("user constructor called");
+
+    private String username;
+    private String password;
+
+    public String getUsername() {
+        return username;
     }
 
-    public String getName() {
-        return name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public int getUserid() {
-        return userid;
+    public String getPassword() {
+        return password;
     }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
-
 }

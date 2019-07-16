@@ -1,4 +1,4 @@
-package com.stackroute.exercise1.initialize;
+package com.stackroute.exercise1;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -15,12 +15,11 @@ public class MyAppInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(ServletContext container) {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.setConfigLocation("com.stackroute.config");
+        context.setConfigLocation("com.stackroute.exercise1");
 
         container.addListener(new ContextLoaderListener(context));
 
-        ServletRegistration.Dynamic dispatcher = container
-                .addServlet("dispatcher", new DispatcherServlet(context));
+        ServletRegistration.Dynamic dispatcher = container.addServlet("dispatcher", new DispatcherServlet(context));
 
         dispatcher.setLoadOnStartup(1);
         dispatcher.addMapping("/");
